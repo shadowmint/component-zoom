@@ -1,0 +1,12 @@
+div(class=title_style)
+  h1 
+    = title
+  ul
+    for item in items
+      li
+        if item.task && (item.task != '')
+          a(href=item.task)
+            = item.title
+        else
+          span
+            = item.title
